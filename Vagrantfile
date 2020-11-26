@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "db" do |db|
     db.vm.box = "ubuntu/bionic64"
     db.vm.network "private_network", ip: "192.168.10.150"
-    db.hostsupdater.aliases = ["development.local"]
+    db.hostsupdater.aliases = ["database.local"]
     db.vm.provision "shell", path: "environment/db/provision.sh", privileged: false
   end
 

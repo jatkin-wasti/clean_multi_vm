@@ -9,6 +9,8 @@ sudo apt-get upgrade -y
 # install git
 sudo apt-get install git -y
 
+echo "export DB_HOST='192.168.10.150'" >> ~/.bashrc
+
 # install nodejs
 sudo apt-get install python-software-properties -y
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -21,6 +23,8 @@ sudo apt-get install nginx -y
 
 # finally, restart the nginx service so the new config takes hold
 sudo service nginx restart
+
+# echo "export DB_HOST='192.168.10.100'" >> ~/.bashrc
 
 cd /home/ubuntu/app
 sudo npm install
