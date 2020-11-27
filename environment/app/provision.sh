@@ -21,6 +21,18 @@ sudo npm install pm2 -g
 
 sudo apt-get install nginx -y
 
+# sudo unlink /etc/nginx/sites-enabled/default
+# cd /etc/nginx/sites-available
+# sudo nano reverse-proxy.conf
+# paste this information in with an echo > reverse-proxy.config ???
+# server {
+#     listen 80;
+#     location / {
+#         proxy_pass http://development.local:3000/;
+#     }
+# }
+# sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+
 # finally, restart the nginx service so the new config takes hold
 sudo service nginx restart
 
