@@ -61,3 +61,16 @@ to our app on port 3000
 multi-machine-clean directory where you can see the Vagrantfile if you `ls`
 - Run `vagrant up` to create and start the virtual machines
 - Access the content from port 3000 without having to specify it, at `development.local`!
+- If you want to run this multiple times and have run `vagrant destroy`, you'll
+need to recreate the reverse-proxy.conf file as it gets moved out of this
+directory every time we run `vagrant up`
+- To do this, simply create a file in the /app directory (where you can find
+  app.js if you `ls`) and create a file called `reverse-proxy.conf`
+- All you need to do is paste the text below into the file and then save it and
+you're ready to `vagrant up` again!
+`server {
+    listen 80;
+    location / {
+        proxy_pass http://192.168.10.100:3000/;
+    }
+}`
