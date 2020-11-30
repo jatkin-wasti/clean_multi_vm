@@ -36,7 +36,7 @@ sudo apt-get install nginx -y
 # disabling the default virtual host
 sudo unlink /etc/nginx/sites-enabled/default
 # setting up our new config file in the sites-available directory
-sudo mv /home/ubuntu/app/reverse-proxy.conf /etc/nginx/sites-available/
+sudo cp /home/ubuntu/app/reverse-proxy.conf /etc/nginx/sites-available/
 # creating a symbolic link to the sites-enabled directory to enable this new config file
 sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 
