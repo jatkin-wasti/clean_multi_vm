@@ -65,7 +65,7 @@ multi-machine-clean directory where you can see the Vagrantfile if you `ls`
 simply recreate the file
 - To do this, simply create a file in the /app directory (where you can find
   app.js if you `ls`) and create a file called `reverse-proxy.conf`
-- All you need to do is paste the text below into the file and then save it and
+- All you need to do is paste the text below into the file, save it, and
 you're ready to `vagrant up` again!
 ```
 server {
@@ -75,3 +75,8 @@ server {
     }
 }
 ```
+- If there are issues, you can enter the environment set up for the app with
+`vagrant ssh app` and run the `sudo service nginx configtest` command to see if
+if nginx is configuring correctly
+- If the configuration fails, let your system administrator know about this so
+that the issue can be resolved

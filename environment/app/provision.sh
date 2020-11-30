@@ -10,6 +10,7 @@ sudo apt-get upgrade -y
 sudo apt-get install git -y
 # export the ip address of the db in the bashrc file as an environment variable
 echo "export DB_HOST='192.168.10.150'" >> ~/.bashrc
+source ~/.bashrc
 
 # install nodejs
 sudo apt-get install python-software-properties -y
@@ -33,6 +34,7 @@ sudo apt-get install nginx -y
 #     }
 # }
 # sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+
 # disabling the default virtual host
 sudo unlink /etc/nginx/sites-enabled/default
 # setting up our new config file in the sites-available directory
