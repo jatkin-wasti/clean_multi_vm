@@ -1,7 +1,6 @@
 # Nginx Reverse Proxy
 
 ## Timings
-
 60 - 90 Minutes
 
 ## Summary
